@@ -1,8 +1,8 @@
 include:
   - docassemble.AssemblyLine:al_package.yml
   - docassemble.EFSPIntegration:efiling_integration.yml
-  - docassemble.ILAOEfile:ilao-interview-framework.yml
-  - docassemble.ILAOEfile:shared-basic-questions.yml
+  - docassemble.ILAO:ilao-interview-framework.yml
+  - docassemble.ILAO:shared-basic-questions.yml
 ---
 modules:
   - docassemble.PovertyScale.poverty
