@@ -1,6 +1,6 @@
 import os
 import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 from fnmatch import fnmatchcase
 from distutils.util import convert_path
 
@@ -44,7 +44,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
     return out
 
 setup(name='docassemble.IlFeeWaiver',
-      version='2.2.1',
+      version='2.2.2',
       description=('Fee waiver'),
       long_description='> [!NOTE]  \r\n> This is a duplicate of [IllinoisLegalAidOnline/docassemble-FeeWaiver](https://github.com/IllinoisLegalAidOnline/docassemble-FeeWaiver), and it appeared to be significantly out of date when archived.\r\n\r\n# docassemble.IlFeeWaiver\r\n\r\nApplication for Fee Waiver\r\n\r\n## Author\r\n\r\nQuinten Steenhuis / Matt Newsted\r\n\r\nqsteenhuis@suffolk.edu, mnewsted@illinoislegalaid.org\r\n\r\n',
       long_description_content_type='text/markdown',
@@ -52,9 +52,8 @@ setup(name='docassemble.IlFeeWaiver',
       author_email='qsteenhuis@suffolk.edu mnewsted@illinoislegalaid.org',
       license='The MIT License',
       url='http://www.illinoislegalaid.org',
-      packages=find_packages(),
-      namespace_packages=['docassemble'],
-      install_requires=['docassemble.AssemblyLine>=3.1.0', 'docassemble.EFSPIntegration>=1.5.0', 'docassemble.PovertyScale>=2024.0.0'],
+      packages=find_namespace_packages(),
+      install_requires=['docassemble.AssemblyLine @ git+https://github.com/SuffolkLITLab/docassemble-AssemblyLine.git@main', 'docassemble.EFSPIntegration @ git+https://github.com/SuffolkLITLab/docassemble-EFSPIntegration.git@main', 'docassemble.PovertyScale>=2024.0.0'],
       zip_safe=False,
       package_data=find_package_data(where='docassemble/IlFeeWaiver/', package='docassemble.IlFeeWaiver'),
      )
