@@ -44,7 +44,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
     return out
 
 setup(name='docassemble.IlFeeWaiver',
-      version='2.3.1',
+      version='2.3.2',
       description=('Fee waiver'),
       long_description='> [!NOTE]  \r\n> This is a duplicate of [IllinoisLegalAidOnline/docassemble-FeeWaiver](https://github.com/IllinoisLegalAidOnline/docassemble-FeeWaiver), and it appeared to be significantly out of date when archived.\r\n\r\n# docassemble.IlFeeWaiver\r\n\r\nApplication for Fee Waiver\r\n\r\n## Author\r\n\r\nQuinten Steenhuis / Matt Newsted\r\n\r\nqsteenhuis@suffolk.edu, mnewsted@illinoislegalaid.org\r\n\r\n',
       long_description_content_type='text/markdown',

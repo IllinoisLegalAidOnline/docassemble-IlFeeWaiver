@@ -2058,11 +2058,11 @@ review:
       % endif
   - Edit: signer[0].has_email_address
     button: |
-      **Do you have an email address?**:
+      **Do you have an email address?**
       ${ word(yesno(signer[0].has_email_address)) }
   - Edit: users[0].has_email_address
     button: |
-      **Do you have an email address?**:
+      **Do you have an email address?**
       % if filing_basis != "filing_self":
       ${ word(yesno(signer[0].has_email_address)) }
       % else:
