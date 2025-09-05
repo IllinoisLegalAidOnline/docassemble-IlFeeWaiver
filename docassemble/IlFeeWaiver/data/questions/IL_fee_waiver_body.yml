@@ -90,11 +90,11 @@ code: |
   filing_basis
   #if filing_basis == "filing_on_behalf_of":
   # users.gather() moved to after user_ask_role    
+  user_has_dependents
   if user_receives_benefits:
     user_qualifies_interstitial
   else:
     user_applied_for_benefits
-    user_has_dependents
     set_progress(11.11)
     if not user_income_none:
       if user_income_other:
@@ -1675,14 +1675,20 @@ review:
     button: |
       **Case number**:
       ${ docket_number }
+  - Edit: user_has_dependents
+    button: |
+      **Do you support any household members?**
+      ${ word(yesno(user_has_dependents))}
   - Edit: user_dependents_adults
     button: |
       **Number of adult dependents**:
       ${ user_dependents_adults }
+    show if: user_has_dependents
   - Edit: user_dependents_children
     button: |
       **Number of minor dependents**:
       ${ user_dependents_children }
+    show if: user_has_dependents
   - Edit:
       - user_benefits
       - recompute:
